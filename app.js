@@ -144,10 +144,7 @@ const menuFlow = addKeyword('menu')
                         await flowDynamic(`${position1}\n${position2}\n${position3}`)
                         break
                     case '2':
-                        const manzalitrosByPrice115 = await manzalitros.filter((item) => {
-                            item.price === 115
-                            return item.name + item.price
-                        })
+                        const manzalitrosByPrice115 = await manzalitros.filter((item) =>item.price === 115)
                         const manzalitrosByPrice125 = await manzalitros.filter((item) => item.price === 125)
                         const manzalitrosByPrice135 = await manzalitros.filter((item) => item.price === 135)
                         
