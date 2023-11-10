@@ -95,6 +95,34 @@ const manzalitros = [
     
 ]
 
+const micheladas = [
+    {
+        id : 1,
+        name : 'Tradicional',
+        price : 75
+    },
+    {
+        id : 2,
+        name : 'Salseada',
+        price : 75
+    },
+    {
+        id : 3,
+        name : 'Cielo Rojo',
+        price : 75
+    },
+    {
+        id : 4,
+        name : 'Chelada',
+        price : 75
+    },
+    {
+        id : 5,
+        name : 'Michelada de Sabor',
+        price : 90
+    }
+]
+
 
 const menuFlow = addKeyword('menu')
     .addAnswer(
