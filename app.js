@@ -212,9 +212,11 @@ const menuFlow = addKeyword('menu')
                         break
                     case '4':
                         await flowDynamic('Selecionaste Especialidades')
+                        await gotoFlow(menuFlow)
                         break
                     case '5':
                         await flowDynamic('Selecionaste Sin Alcohol')
+                        await gotoFlow(menuFlow)
                         break
                     default:
                         await flowDynamic('Opcion no valida')
@@ -234,7 +236,7 @@ const menuFlow = addKeyword('menu')
 
 
 
-const flowPrincipal = addKeyword(['hola'])
+const flowPrincipal = addKeyword(['manzalitros'])
     .addAnswer('Hola, muchas gracias por contactarnos. Bienvenid@ a nuestro Manzalitros ChatBot.')
     .addAnswer('¿Como podemos ayudarte hoy?')
     .addAnswer([
