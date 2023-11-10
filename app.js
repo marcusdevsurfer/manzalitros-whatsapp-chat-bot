@@ -123,6 +123,29 @@ const micheladas = [
     }
 ]
 
+const especialidades = [
+    {
+        id : 1,
+        name : 'Baileys',
+        price : 145
+    },
+    {
+        id : 2,
+        name : 'Tejuino Loco',
+        price : 145
+    },
+    {
+        id : 3,
+        name : 'Mojito de Coco',
+        price : 145
+    },
+    {
+        id : 4,
+        name : 'Tejuichela',
+        price : 145
+    }
+]
+
 
 const menuFlow = addKeyword('menu')
     .addAnswer(
@@ -148,7 +171,7 @@ const menuFlow = addKeyword('menu')
         }
     )
     .addAnswer(
-        ['Selecciona una categoria, escribe un numero del 1 - 5 para continuar.'],
+        ['Escribe un numero del 1 - 5 para continuar.'],
         {
             capture: true
         },
