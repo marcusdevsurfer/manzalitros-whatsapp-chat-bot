@@ -195,7 +195,20 @@ const menuFlow = addKeyword('menu')
                         await gotoFlow(menuFlow)
                         break
                     case '3':
-                        await flowDynamic('Selecionaste Micheladas')
+                        const micheladasData = await micheladas.map((michelada) => {
+                            const name = michelada.name
+                            const price = michelada.price
+                            return `${name} $${price}`
+                        }) 
+
+                        const micheladasDataPosition1 = micheladasData[0]
+                        const micheladasDataPosition2 = micheladasData[1]
+                        const micheladasDataPosition3 = micheladasData[2]
+                        const micheladasDataPosition4 = micheladasData[3]
+                        const micheladasDataPosition5 = micheladasData[4]
+
+                        await flowDynamic(`${micheladasDataPosition1}\n${micheladasDataPosition2}\n${micheladasDataPosition3}\n${micheladasDataPosition4}\n${micheladasDataPosition5}`)
+                        await gotoFlow(menuFlow)
                         break
                     case '4':
                         await flowDynamic('Selecionaste Especialidades')
