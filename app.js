@@ -31,130 +31,146 @@ const drinkTypes = [
 const caguamasPreparadas = [
     {
         id: 1,
-        name : 'Familiar',
-        price : 95,
+        name: 'Familiar',
+        price: 95,
     },
     {
         id: 2,
-        name : 'Mega',
-        price : 125,
+        name: 'Mega',
+        price: 125,
     },
     {
         id: 3,
-        name : 'Doble Canala',
-        price : 160,
+        name: 'Doble Canala',
+        price: 160,
     },
 ]
 
 const manzalitros = [
     {
         id: 1,
-        name : 'Pitufo',
-        price : 115,
+        name: 'Pitufo',
+        price: 115,
     },
     {
         id: 2,
-        name : 'Morita',
-        price : 115,
+        name: 'Morita',
+        price: 115,
     },
     {
         id: 3,
-        name : 'Paloma',
-        price : 115,
+        name: 'Paloma',
+        price: 115,
     },
     {
         id: 4,
-        name : 'Tequila Sunrise',
-        price : 115,
+        name: 'Tequila Sunrise',
+        price: 115,
     },
     {
         id: 5,
-        name : 'Piña Colada',
-        price : 125,
+        name: 'Piña Colada',
+        price: 125,
     },
     {
         id: 6,
-        name : 'Gin De Frutos Rojos',
-        price : 125,
+        name: 'Gin De Frutos Rojos',
+        price: 125,
     },
     {
         id: 7,
-        name : 'Hulk',
-        price : 135,
+        name: 'Hulk',
+        price: 135,
     },
     {
         id: 8,
-        name : 'Fresita',
-        price : 135,
+        name: 'Fresita',
+        price: 135,
     },
     {
         id: 9,
-        name : 'Mojito Rey o Reyna',
-        price : 135,
+        name: 'Mojito Rey o Reyna',
+        price: 135,
     },
-    
+
 ]
 
 const micheladas = [
     {
-        id : 1,
-        name : 'Tradicional',
-        price : 75
+        id: 1,
+        name: 'Tradicional',
+        price: 75
     },
     {
-        id : 2,
-        name : 'Salseada',
-        price : 75
+        id: 2,
+        name: 'Salseada',
+        price: 75
     },
     {
-        id : 3,
-        name : 'Cielo Rojo',
-        price : 75
+        id: 3,
+        name: 'Cielo Rojo',
+        price: 75
     },
     {
-        id : 4,
-        name : 'Chelada',
-        price : 75
+        id: 4,
+        name: 'Chelada',
+        price: 75
     },
     {
-        id : 5,
-        name : 'Michelada de Sabor',
-        price : 90
+        id: 5,
+        name: 'Michelada de Sabor',
+        price: 90
     }
 ]
+
 
 const especialidades = [
     {
-        id : 1,
-        name : 'Baileys',
-        price : 145
+        id: 1,
+        name: 'Baileys',
+        price: 145
     },
     {
-        id : 2,
-        name : 'Tejuino Loco',
-        price : 145
+        id: 2,
+        name: 'Tejuino Loco',
+        price: 145
     },
     {
-        id : 3,
-        name : 'Mojito de Coco',
-        price : 145
+        id: 3,
+        name: 'Mojito de Coco',
+        price: 145
     },
     {
-        id : 4,
-        name : 'Tejuichela',
-        price : 145
+        id: 4,
+        name: 'Tejuichela',
+        price: 145
     }
 ]
 
+const getDrinkTypes = drinkTypes.map((drinkType) => {
+    return drinkType.name
+})
+
+const getCaguamasPreparadas = caguamasPreparadas.map((caguamaPreparada) => {
+    return `${caguamaPreparada.name} $${caguamaPreparada.price}`
+})
 
 const menuFlow = addKeyword('menu')
     .addAnswer(
-        ('Menu')
+        (
+            [
+                'MENU\n',
+                `*${getDrinkTypes[0]}* 🍻`,
+                getCaguamasPreparadas[0],
+                getCaguamasPreparadas[1],
+                `${getCaguamasPreparadas[2]}\n`,                
+            ]
+        )
     )
 
-    
-    
-    
+
+
+
 
 
 
