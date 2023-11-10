@@ -144,7 +144,28 @@ const menuFlow = addKeyword('menu')
                         await flowDynamic(`${position1}\n${position2}\n${position3}`)
                         break
                     case '2':
-                        await flowDynamic('Selecionaste Manzalitros')
+                        const manzalitrosByPrice115 = await manzalitros.filter((item) => {
+                            item.price === 115
+                            return item.name + item.price
+                        })
+                        const manzalitrosByPrice125 = await manzalitros.filter((item) => item.price === 125)
+                        const manzalitrosByPrice135 = await manzalitros.filter((item) => item.price === 135)
+                        
+                        const manzalitrosMessage1Position1 = manzalitrosByPrice115[0]
+                        const manzalitrosMessage1Position2 = manzalitrosByPrice115[1]
+                        const manzalitrosMessage1Position3 = manzalitrosByPrice115[2]
+                        const manzalitrosMessage1Position4 = manzalitrosByPrice115[3]
+
+                        const manzalitrosMessage2Position1 = manzalitrosByPrice125[0]
+                        const manzalitrosMessage2Position2 = manzalitrosByPrice125[1]
+
+                        const manzalitrosMessage3Position1 = manzalitrosByPrice135[0]
+                        const manzalitrosMessage3Position2 = manzalitrosByPrice135[1]
+                        const manzalitrosMessage3Position3 = manzalitrosByPrice135[2]
+
+                        await flowDynamic(`${manzalitrosMessage1Position1.name} $${manzalitrosMessage1Position1.price}\n${manzalitrosMessage1Position2.name} $${manzalitrosMessage1Position2.price}\n${manzalitrosMessage1Position3.name} $${manzalitrosMessage1Position3.price}\n${manzalitrosMessage1Position4.name} $${manzalitrosMessage1Position4.price}`)
+                        await flowDynamic(`${manzalitrosMessage2Position1.name} $${manzalitrosMessage2Position1.price}\n${manzalitrosMessage2Position2.name} $${manzalitrosMessage2Position2.price}`)
+                        await flowDynamic(`${manzalitrosMessage3Position1.name} $${manzalitrosMessage3Position1.price}\n${manzalitrosMessage3Position2.name} $${manzalitrosMessage3Position2.price}\n${manzalitrosMessage3Position3.name} $${manzalitrosMessage3Position3.price}`)
                         break
                     case '3':
                         await flowDynamic('Selecionaste Micheladas')
