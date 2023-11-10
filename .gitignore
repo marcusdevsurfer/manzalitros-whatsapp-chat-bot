@@ -1,0 +1,6 @@
+node_modules
+bot_sessions
+queue.class.log
+core.class.log
+baileys.log
+bot.qr.png
