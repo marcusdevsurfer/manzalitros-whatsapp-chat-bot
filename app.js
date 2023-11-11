@@ -205,6 +205,10 @@ const getEspecialidades = especialidades.map((especialidad) => {
     return `${especialidad.name} $${especialidad.price}`
 })
 
+const getSinAlcohol = sinAlcohol.map((sinAlcohol) => {
+    return `${sinAlcohol.name} $${sinAlcohol.price}`
+})
+
 const menuFlow = addKeyword('menu')
     .addAnswer(
         (
@@ -234,7 +238,15 @@ const menuFlow = addKeyword('menu')
                 getEspecialidades[0],
                 getEspecialidades[1],
                 getEspecialidades[2],
-                getEspecialidades[3]
+                `${getEspecialidades[3]}\n`,
+                `*${getDrinkTypes[4]}* 😋`,
+                getSinAlcohol[0],
+                getSinAlcohol[1],
+                getSinAlcohol[2],
+                getSinAlcohol[3],
+                getSinAlcohol[4],
+                getSinAlcohol[5],
+                getSinAlcohol[6]
             ]
         )
     )
