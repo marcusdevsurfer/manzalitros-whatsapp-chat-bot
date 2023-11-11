@@ -209,7 +209,7 @@ const getSinAlcohol = sinAlcohol.map((sinAlcohol) => {
     return `${sinAlcohol.name} $${sinAlcohol.price}`
 })
 
-const menuFlow = addKeyword(['menu','menú','mas informacion','mas información','bebida','bebidas'])
+const menuFlow = addKeyword(['menu','menú'])
     .addAnswer(
         (
             [
@@ -261,7 +261,7 @@ const menuFlow = addKeyword(['menu','menú','mas informacion','mas información'
 
 
 
-const flowPrincipal = addKeyword(['manzalitros'])
+const flowPrincipal = addKeyword(['manzalitros','mas informacion','mas información','bebida','bebidas'])
     .addAnswer('Hola, muchas gracias por contactarnos. Bienvenid@ a nuestro Manzalitros ChatBot.')
     .addAnswer('¿Como podemos ayudarte hoy?')
     .addAnswer([
