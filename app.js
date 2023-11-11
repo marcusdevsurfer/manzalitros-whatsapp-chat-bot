@@ -147,6 +147,44 @@ const especialidades = [
     }
 ]
 
+const sinAlcohol = [
+    {
+        id: 1,
+        name : 'Naranjada',
+        price : 80
+    },
+    {
+        id: 2,
+        name : 'Limonada',
+        price : 80
+    },
+    {
+        id: 3,
+        name : 'Piñada',
+        price : 90
+    },
+    {
+        id: 4,
+        name : 'Frappe',
+        price : 90
+    },
+    {
+        id: 5,
+        name : 'Limonada de Fresa',
+        price : 90
+    },
+    {
+        id: 6,
+        name : 'Limonada de Frutos Rojos',
+        price : 90
+    },
+    {
+        id: 7,
+        name : 'Frappuccino',
+        price : 100
+    }
+]
+
 const getDrinkTypes = drinkTypes.map((drinkType) => {
     return drinkType.name
 })
