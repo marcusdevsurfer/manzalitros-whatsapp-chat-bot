@@ -155,6 +155,10 @@ const getCaguamasPreparadas = caguamasPreparadas.map((caguamaPreparada) => {
     return `${caguamaPreparada.name} $${caguamaPreparada.price}`
 })
 
+const getManzalitros = manzalitros.map((manzalitro) => {
+        return `${manzalitro.name} $${manzalitro.price}`
+})
+
 const menuFlow = addKeyword('menu')
     .addAnswer(
         (
@@ -163,7 +167,17 @@ const menuFlow = addKeyword('menu')
                 `*${getDrinkTypes[0]}* 🍻`,
                 getCaguamasPreparadas[0],
                 getCaguamasPreparadas[1],
-                `${getCaguamasPreparadas[2]}\n`,                
+                `${getCaguamasPreparadas[2]}\n`,
+                `*${getDrinkTypes[1]}* 🥃`,
+                getManzalitros[0], 
+                getManzalitros[1],
+                getManzalitros[2],
+                getManzalitros[3],
+                getManzalitros[4],
+                getManzalitros[5],
+                getManzalitros[6],
+                getManzalitros[7],
+                getManzalitros[8],
             ]
         )
     )
