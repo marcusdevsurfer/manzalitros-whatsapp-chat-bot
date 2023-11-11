@@ -163,6 +163,10 @@ const getMicheladas = micheladas.map((michelada) => {
     return `${michelada.name} $${michelada.price}`
 })  
 
+const getEspecialidades = especialidades.map((especialidad) => {
+    return `${especialidad.name} $${especialidad.price}`
+})
+
 const menuFlow = addKeyword('menu')
     .addAnswer(
         (
@@ -187,7 +191,12 @@ const menuFlow = addKeyword('menu')
                 getMicheladas[1],
                 getMicheladas[2],
                 getMicheladas[3],
-                getMicheladas[4],
+                `${getMicheladas[4]}\n`,
+                `*${getDrinkTypes[3]}* 💫`,
+                getEspecialidades[0],
+                getEspecialidades[1],
+                getEspecialidades[2],
+                getEspecialidades[3]
             ]
         )
     )
@@ -207,7 +216,8 @@ const flowPrincipal = addKeyword(['manzalitros'])
     .addAnswer('¿Como podemos ayudarte hoy?')
     .addAnswer([
         'Por favor escribe un comando para continuar. \n',
-        '*' + '/menu' + '*' + ' ' + '👉🏼' + ' ' + 'Ver Menu',
+        '*' + '/menu' + '*' + ' ' + '👉🏼' + ' ' + 'Ver Menú',
+        '*' + '/ubi' + '*' + ' ' + '👉🏼' + ' ' + 'Ver Ubicación',
     ],
         null,
         null,
