@@ -159,6 +159,10 @@ const getManzalitros = manzalitros.map((manzalitro) => {
         return `${manzalitro.name} $${manzalitro.price}`
 })
 
+const getMicheladas = micheladas.map((michelada) => {
+    return `${michelada.name} $${michelada.price}`
+})  
+
 const menuFlow = addKeyword('menu')
     .addAnswer(
         (
@@ -177,7 +181,13 @@ const menuFlow = addKeyword('menu')
                 getManzalitros[5],
                 getManzalitros[6],
                 getManzalitros[7],
-                getManzalitros[8],
+                `${getManzalitros[8]}\n`,
+                `*${getDrinkTypes[2]}* 🍻🌶️`,
+                getMicheladas[0],
+                getMicheladas[1],
+                getMicheladas[2],
+                getMicheladas[3],
+                getMicheladas[4],
             ]
         )
     )
