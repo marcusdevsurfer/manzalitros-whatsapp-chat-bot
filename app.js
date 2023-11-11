@@ -209,7 +209,7 @@ const getSinAlcohol = sinAlcohol.map((sinAlcohol) => {
     return `${sinAlcohol.name} $${sinAlcohol.price}`
 })
 
-const menuFlow = addKeyword('menu')
+const menuFlow = addKeyword(['menu','menú','mas informacion','mas información','bebida','bebidas'])
     .addAnswer(
         (
             [
