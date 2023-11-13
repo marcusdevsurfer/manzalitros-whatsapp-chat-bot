@@ -217,6 +217,16 @@ const locationFlow = addKeyword(['ubi', 'ubicacion', 'ubicación'])
         delay : 800
     }
     )
+    .addAnswer(
+        ['¿Deseas regresar al menu principal?', 's - si\nn -no'],
+        {
+            delay : 800,
+            capture : true
+        },
+        async(ctx, {flowDynamic, gotoFlow}) => {
+            ctx.body ==='n' ? flowDynamic('Gracias por usar nuestro bot 🤖') : gotoFlow(flowPrincipal)
+        }
+    )
 
 const menuFlow = addKeyword(['menu', 'menú'])
     .addAnswer(
