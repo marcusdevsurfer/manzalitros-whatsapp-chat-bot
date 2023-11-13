@@ -150,38 +150,38 @@ const especialidades = [
 const sinAlcohol = [
     {
         id: 1,
-        name : 'Naranjada',
-        price : 80
+        name: 'Naranjada',
+        price: 80
     },
     {
         id: 2,
-        name : 'Limonada',
-        price : 80
+        name: 'Limonada',
+        price: 80
     },
     {
         id: 3,
-        name : 'Piñada',
-        price : 90
+        name: 'Piñada',
+        price: 90
     },
     {
         id: 4,
-        name : 'Frappe',
-        price : 90
+        name: 'Frappe',
+        price: 90
     },
     {
         id: 5,
-        name : 'Limonada de Fresa',
-        price : 90
+        name: 'Limonada de Fresa',
+        price: 90
     },
     {
         id: 6,
-        name : 'Limonada de Frutos Rojos',
-        price : 90
+        name: 'Limonada de Frutos Rojos',
+        price: 90
     },
     {
         id: 7,
-        name : 'Frappuccino',
-        price : 100
+        name: 'Frappuccino',
+        price: 100
     }
 ]
 
@@ -194,12 +194,12 @@ const getCaguamasPreparadas = caguamasPreparadas.map((caguamaPreparada) => {
 })
 
 const getManzalitros = manzalitros.map((manzalitro) => {
-        return `${manzalitro.name} $${manzalitro.price}`
+    return `${manzalitro.name} $${manzalitro.price}`
 })
 
 const getMicheladas = micheladas.map((michelada) => {
     return `${michelada.name} $${michelada.price}`
-})  
+})
 
 const getEspecialidades = especialidades.map((especialidad) => {
     return `${especialidad.name} $${especialidad.price}`
@@ -209,10 +209,10 @@ const getSinAlcohol = sinAlcohol.map((sinAlcohol) => {
     return `${sinAlcohol.name} $${sinAlcohol.price}`
 })
 
-const locationFlow = addKeyword(['ubi','ubicacion','ubicación'])
-    .addAnswer(['Te proprocionamos nuestra ubicación para pasar a recoger 📦','https://www.google.com.mx/maps/place/Hotel+y+Villas+Salagua/@19.1037219,-104.3304379,19.42z/data=!4m18!1m8!3m7!1s0x8424d67c2d96b33b:0x394484ca5b3b3e63!2sBlvd.+Miguel+de+la+Madrid+1014,+Soleares,+Garzas+Gaviotas,+28869+Manzanillo,+Col.!3b1!8m2!3d19.1035837!4d-104.329508!16s%2Fg%2F11b8v6cj_3!3m8!1s0x8424d67dcfcd27e9:0x5118d7220f066b02!5m2!4m1!1i2!8m2!3d19.1035801!4d-104.330423!16s%2Fg%2F11clztv924?entry=ttu'])
+const locationFlow = addKeyword(['ubi', 'ubicacion', 'ubicación'])
+    .addAnswer(['Te proprocionamos nuestra ubicación para pasar a recoger 📦', 'https://www.google.com.mx/maps/place/Hotel+y+Villas+Salagua/@19.1037219,-104.3304379,19.42z/data=!4m18!1m8!3m7!1s0x8424d67c2d96b33b:0x394484ca5b3b3e63!2sBlvd.+Miguel+de+la+Madrid+1014,+Soleares,+Garzas+Gaviotas,+28869+Manzanillo,+Col.!3b1!8m2!3d19.1035837!4d-104.329508!16s%2Fg%2F11b8v6cj_3!3m8!1s0x8424d67dcfcd27e9:0x5118d7220f066b02!5m2!4m1!1i2!8m2!3d19.1035801!4d-104.330423!16s%2Fg%2F11clztv924?entry=ttu'])
 
-const menuFlow = addKeyword(['menu','menú'])
+const menuFlow = addKeyword(['menu', 'menú'])
     .addAnswer(
         (
             [
@@ -222,7 +222,7 @@ const menuFlow = addKeyword(['menu','menú'])
                 getCaguamasPreparadas[1],
                 `${getCaguamasPreparadas[2]}\n`,
                 `*${getDrinkTypes[1]}* 🥃`,
-                getManzalitros[0], 
+                getManzalitros[0],
                 getManzalitros[1],
                 getManzalitros[2],
                 getManzalitros[3],
@@ -255,16 +255,34 @@ const menuFlow = addKeyword(['menu','menú'])
     )
 
 
-const flowPrincipal = addKeyword(['manzalitros','mas informacion','mas información','bebida','bebidas'])
-    .addAnswer('Hola, muchas gracias por contactarnos. Bienvenid@ a nuestro Manzalitros ChatBot.')
-    .addAnswer('Nuestros horarios: Jueves a Domingo 14:00 pm - 12:00 am')
-    .addAnswer('¿Como podemos ayudarte hoy?')
-    .addAnswer([
-        'Por favor escribe un comando para continuar. \n',
-        '*' + '/menu' + '*' + ' ' + '👉🏼' + ' ' + 'Ver Menú',
-        '*' + '/ubi' + '*' + ' ' + '👉🏼' + ' ' + 'Ver Ubicación',
-    ],
-        null,
+const flowPrincipal = addKeyword(['manzalitros', 'mas informacion', 'mas información', 'bebida', 'bebidas'])
+    .addAnswer(
+        'Hola, muchas gracias por contactarnos. Bienvenid@ a nuestro Manzalitros ChatBot.',
+        {
+            delay: 800
+        }
+    )
+    .addAnswer(
+        'Nuestros horarios: Jueves a Domingo 14:00 pm - 12:00 am',
+        {
+            delay : 800
+        }
+    )
+    .addAnswer(
+        '¿Como podemos ayudarte hoy?',
+        {
+            delay : 800
+        }
+    )
+    .addAnswer(
+        [
+            'Por favor escribe un comando para continuar. \n',
+            '*' + '/menu' + '*' + ' ' + '👉🏼' + ' ' + 'Ver Menú',
+            '*' + '/ubi' + '*' + ' ' + '👉🏼' + ' ' + 'Ver Ubicación',
+        ],
+        {
+            delay : 800
+        },
         null,
         [menuFlow, locationFlow]
     )
