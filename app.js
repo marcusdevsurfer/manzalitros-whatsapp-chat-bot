@@ -210,7 +210,13 @@ const getSinAlcohol = sinAlcohol.map((sinAlcohol) => {
 })
 
 const locationFlow = addKeyword(['ubi', 'ubicacion', 'ubicación'])
-    .addAnswer(['Te proprocionamos nuestra ubicación para pasar a recoger 📦', 'https://www.google.com.mx/maps/place/Hotel+y+Villas+Salagua/@19.1037219,-104.3304379,19.42z/data=!4m18!1m8!3m7!1s0x8424d67c2d96b33b:0x394484ca5b3b3e63!2sBlvd.+Miguel+de+la+Madrid+1014,+Soleares,+Garzas+Gaviotas,+28869+Manzanillo,+Col.!3b1!8m2!3d19.1035837!4d-104.329508!16s%2Fg%2F11b8v6cj_3!3m8!1s0x8424d67dcfcd27e9:0x5118d7220f066b02!5m2!4m1!1i2!8m2!3d19.1035801!4d-104.330423!16s%2Fg%2F11clztv924?entry=ttu'])
+    .addAnswer(['Te proprocionamos nuestra ubicación para pasar a recoger 📦',
+        'https://www.google.com.mx/maps/place/Hotel+y+Villas+Salagua/@19.1037219,-104.3304379,19.42z/data=!4m18!1m8!3m7!1s0x8424d67c2d96b33b:0x394484ca5b3b3e63!2sBlvd.+Miguel+de+la+Madrid+1014,+Soleares,+Garzas+Gaviotas,+28869+Manzanillo,+Col.!3b1!8m2!3d19.1035837!4d-104.329508!16s%2Fg%2F11b8v6cj_3!3m8!1s0x8424d67dcfcd27e9:0x5118d7220f066b02!5m2!4m1!1i2!8m2!3d19.1035801!4d-104.330423!16s%2Fg%2F11clztv924?entry=ttu'
+    ],
+    {
+        delay : 800
+    }
+    )
 
 const menuFlow = addKeyword(['menu', 'menú'])
     .addAnswer(
@@ -252,7 +258,7 @@ const menuFlow = addKeyword(['menu', 'menú'])
                 getSinAlcohol[6]
             ]
         ),
-        {delay : 800}
+        { delay: 800 }
     )
 
 
@@ -266,13 +272,13 @@ const flowPrincipal = addKeyword(['manzalitros', 'mas informacion', 'mas informa
     .addAnswer(
         'Nuestros horarios: Jueves a Domingo 14:00 pm - 12:00 am',
         {
-            delay : 800
+            delay: 800
         }
     )
     .addAnswer(
         '¿Como podemos ayudarte hoy?',
         {
-            delay : 800
+            delay: 800
         }
     )
     .addAnswer(
@@ -282,7 +288,7 @@ const flowPrincipal = addKeyword(['manzalitros', 'mas informacion', 'mas informa
             '*' + '/ubi' + '*' + ' ' + '👉🏼' + ' ' + 'Ver Ubicación',
         ],
         {
-            delay : 800
+            delay: 800
         },
         null,
         [menuFlow, locationFlow]
