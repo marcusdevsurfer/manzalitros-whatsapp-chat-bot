@@ -251,7 +251,8 @@ const menuFlow = addKeyword(['menu', 'menú'])
                 getSinAlcohol[5],
                 getSinAlcohol[6]
             ]
-        )
+        ),
+        {delay : 800}
     )
 
 
