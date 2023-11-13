@@ -257,6 +257,7 @@ const menuFlow = addKeyword(['menu','menú'])
 
 const flowPrincipal = addKeyword(['manzalitros','mas informacion','mas información','bebida','bebidas'])
     .addAnswer('Hola, muchas gracias por contactarnos. Bienvenid@ a nuestro Manzalitros ChatBot.')
+    .addAnswer('Nuestros horarios: Jueves a Domingo 14:00 pm - 12:00 am')
     .addAnswer('¿Como podemos ayudarte hoy?')
     .addAnswer([
         'Por favor escribe un comando para continuar. \n',
