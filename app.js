@@ -260,6 +260,16 @@ const menuFlow = addKeyword(['menu', 'menú'])
         ),
         { delay: 800 }
     )
+    .addAnswer(
+        ['¿Deseas regresar al menu principal?', 's - si\nn -no'],
+        {
+            delay : 800,
+            capture : true
+        },
+        async(ctx, {flowDynamic, gotoFlow}) => {
+            ctx.body ==='n' ? flowDynamic('Gracias por usar nuestro bot 🤖') : gotoFlow(flowPrincipal)
+        }
+    )
 
 
 const flowPrincipal = addKeyword(['manzalitros', 'manzalitro', 'mas informacion', 'mas información', 'bebida', 'bebidas'])
